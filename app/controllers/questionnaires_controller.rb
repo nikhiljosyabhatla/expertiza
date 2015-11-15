@@ -96,7 +96,7 @@ class QuestionnairesController < ApplicationController
     rescue
       flash[:error] = $!
     end
-    redirect_to :controller => 'tree_display', :action => 'list'
+    redirect_to edit_questionnaire_path(@questionnaire.id.to_s.to_sym)
   end
 
   def create_questionnaire
